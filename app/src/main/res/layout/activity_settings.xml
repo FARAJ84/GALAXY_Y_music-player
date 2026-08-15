@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dip">
+
+        <CheckBox
+            android:id="@+id/setting_headset"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/headset_autoplay"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/setting_gapless"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gapless_playback"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/setting_show_lyrics"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_lyrics"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/setting_lyrics_autoscroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_scroll_lyrics"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/setting_show_hidden"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_hidden_files"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fade_duration"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="12dip"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/setting_fade"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="50"/>
+
+            <TextView
+                android:id="@+id/fade_value"
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="0ms"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_duration"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="8dip"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/setting_filter"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="60"/>
+
+            <TextView
+                android:id="@+id/filter_value"
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="0s"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_order"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="8dip"/>
+
+        <Spinner
+            android:id="@+id/setting_sort"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_clear_history"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:text="@string/clear_history"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="@string/about"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</ScrollView>

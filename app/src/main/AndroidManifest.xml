@@ -1,0 +1,11 @@
+        <!-- Lyrics Viewer -->
+        <activity
+            android:name=".ui.LyricsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" />
+
+        <!-- Tag Editor -->
+        <activity
+            android:name=".ui.TagEditorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/edit_tags" />
