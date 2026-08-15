@@ -1,0 +1,19 @@
+// Top-level build file for Galaxy Y Music Player
+// Optimized for Android Gradle Plugin 1.5.0 + Gradle 2.8
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+    }
+}

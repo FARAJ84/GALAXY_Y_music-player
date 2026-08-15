@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy Y Music</string>
+    <string name="title_playlists">Playlists</string>
+    <string name="title_files">Files</string>
+    <string name="title_equalizer">Equalizer</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="create_playlist">Create Playlist</string>
+    <string name="playlist_name_hint">Playlist name</string>
+    <string name="rename_playlist">Rename</string>
+    <string name="delete_playlist">Delete</string>
+    <string name="confirm_delete_playlist">Delete this playlist?</string>
+    <string name="songs">songs</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="select_playlist">Select Playlist</string>
+    <string name="no_playlists">Create a playlist first</string>
+    <string name="added_songs">Added %d songs</string>
+
+    <string name="enable_equalizer">Enable Equalizer</string>
+    <string name="preset">Preset</string>
+    <string name="preset_custom">Custom</string>
+    <string name="bass_boost">Bass Boost</string>
+    <string name="virtualizer">Virtualizer</string>
+    <string name="reset">Reset</string>
+    <string name="eq_reset">Equalizer reset</string>
+    <string name="eq_not_available">Audio effects not available on this device</string>
+
+    <string name="headset_autoplay">Auto-play on headset connect</string>
+    <string name="gapless_playback">Gapless playback</string>
+    <string name="show_hidden_files">Show hidden files</string>
+    <string name="fade_duration">Fade in/out duration</string>
+    <string name="filter_duration">Minimum track length filter</string>
+    <string name="sort_order">Default sort order</string>
+    <string name="clear_history">Clear play history</string>
+    <string name="confirm_clear_history">Clear all playback history?</string>
+    <string name="history_cleared">History cleared</string>
+    <string name="about">About</string>
+    <string name="about_title">Galaxy Y Music Player</string>
+    <string name="about_message">Optimized for Android 2.3 Gingerbread and Samsung Galaxy Y. Lightweight, fast, and feature-rich.</string>
+
+    <string name="shuffle_on">Shuffle: ON</string>
+    <string name="shuffle_off">Shuffle: OFF</string>
+
+    <!-- Lyrics & Tag Editor (from second message) -->
+    <string name="show_lyrics">Show lyrics if available</string>
+    <string name="auto_scroll_lyrics">Auto-scroll lyrics</string>
+    <string name="no_lyrics_found">No lyrics found for this song.\nPlace a .lrc file with the same name in the same folder.</string>
+
+    <string name="edit_tags">Edit Tags</string>
+    <string name="save_tags">Save Tags</string>
+    <string name="tag_title_label">Title</string>
+    <string name="tag_artist_label">Artist</string>
+    <string name="tag_album_label">Album</string>
+    <string name="confirm_save_tags">Save ID3 tags?</string>
+    <string name="tag_editor_warning">This will overwrite the existing ID3 tag. Make a backup if unsure.</string>
+    <string name="tags_saved">Tags saved successfully</string>
+    <string name="tags_save_failed">Failed to save tags</string>
+    <string name="error_no_file">No file specified</string>
+    <string name="only_mp3_tags">Tag editing is only supported for MP3 files</string>
+    <string name="added_to_favorites">Added to favorites</string>
+</resources>
