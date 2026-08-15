@@ -1,1 +1,61 @@
+name: Build Galaxy Y Music APK
 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      - name: Install 32-bit compatibility libraries
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          sudo apt-get install -y libc6:i386 libstdc++6:i386 zlib1g:i386 libncurses5:i386 libtinfo5:i386 || true
+
+      - name: Download Android SDK Platform 10
+        run: |
+          mkdir -p $HOME/android-sdk/platforms
+          curl -L -o android-10.zip https://dl.google.com/android/repository/android-2.3.3_r02-linux.zip
+          unzip -q android-10.zip -d $HOME/android-sdk/platforms/android-10
+          rm android-10.zip
+
+      - name: Download Build Tools 19.1.0
+        run: |
+          mkdir -p $HOME/android-sdk/build-tools
+          curl -L -o build-tools.zip https://dl.google.com/android/repository/build-tools_r19.1-linux.zip
+          unzip -q build-tools.zip -d $HOME/android-sdk/build-tools/19.1.0
+          rm build-tools.zip
+
+      - name: Set environment variables
+        run: |
+          echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
+
+      - name: Build APK with Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Locate and upload APK
+        run: |
+          find app/build -name "*.apk" -type f
+        shell: bash
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: GalaxyY-Music-APK
+          path: app/build/**/*.apk
